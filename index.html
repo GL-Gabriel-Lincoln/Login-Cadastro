@@ -1,109 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <title>Login</title>
+    <title>GL | Gabriel Lincoln</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="viewport" content="user-scalable=no" />
+    <link rel="icon" href="./GL.ico" type="image/x-icon" />
 
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJc5fM/1B+hK2xAuMv4fK/lO+h+r+f0T7x7uK3j5q3b/9L9C6q9T7w6G5l3o7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
-    <link rel="icon" href="/Portifolio/GL.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
 
-    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
-
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script
+      src="https://unpkg.com/react@17/umd/react.production.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+      defer
+    ></script>
   </head>
   <body>
-    <div id="navbar"></div>
+    <header class="page-header">
+      <div id="navbar"></div>
 
-    <br />
-    <div class="title-bar">
-      <h1><a class="color">Login / Cadastro</a></h1>
-    </div>
-    <br />
+      <div class="title-bar">
+        <h1>
+          <a href="#" class="active-page">Home</a>
+        </h1>
+      </div>
+    </header>
 
-    <form id="myForm">
-      <div
-        style="
-          text-align: center;
-          background-color: #0066ff;
-          border: 2px solid #ffffff;
-          padding: 20px;
-          border-radius: 10px;
-          width: 500px;
-          height: 225px;
-          margin-left: auto;
-          margin-right: auto;
-        "
-      >
-        <a
-          >Usuário:
-          <input
-            style="border-radius: 10px"
-            type="text"
-            id="texto1"
-            name="texto1"
-            pattern="[a-zA0-9._]{8,20}"
-            required /></a
-        ><br /><br />
-
-        <a
-          >Senha:
-          <input
-            style="border-radius: 10px"
-            type="password"
-            id="texto2"
-            name="texto2"
-            pattern="[a-zA-Z0-9.*]{8,30}"
-            required /><button
-            style="border-radius: 10px"
-            type="button"
-            onclick="togglePasswordVisibility()"
-          >
-            <i class="fas fa-eye"></i></button></a
-        ><br />
-        <input
-          type="submit"
-          value="Entrar"
-          class="common1 link"
-          id="entrar"
-          onclick="return validateInput()"
-        />
-        <br />
-        <div style="align-items: center">
-          <div id="spinner" style="display: none">
-            <div class="loader"></div>
+    <main class="main-content">
+      <div class="container profile-card-container">
+        <div class="profile-card">
+          <div class="profile-card-overlay">
+            <p class="profile-image-wrapper">
+              <img
+                src="./gl.JPG"
+                alt="Foto de perfil de Gabriel Lincoln"
+                class="profile-image"
+              />
+            </p>
+            <p class="profile-text">
+              Olá, Eu sou **Gabriel Lincoln Ribeiro Oliveira**, um estudante de
+              **Ciência da Computação** na Universidade Federal de Jataí. Antes de
+              entrar na universidade, fiz um curso técnico em Manutenção e
+              Suporte em Informática no IFG durante o Ensino Médio, onde também
+              fui Estagiário no curso sobre ferramentas do Google. Também
+              trabalhei como **técnico eletrônico** na Staffen, onde aprendi
+              muito sobre a instalação e manutenção de equipamentos eletrônicos.
+              Gosto de resolver problemas complexos usando a **programação** e
+              tenho um bom conhecimento em sistemas, softwares, manutenção de
+              hardware e infraestrutura de redes.
+            </p>
           </div>
         </div>
       </div>
-    </form>
-    <br />
-    <div style="text-align: center">
-      <div class="common" style="display: none" id="mensagem"></div>
-    </div>
-    <br />
-    <div class="text-primary" style="font-size: 30px">
-      <p>
-        ⚫Para se logar ou cadastrar, preencha os campos de usuário e senha.
-        <br /><br />⚫O nome de usuário deve ter entre 8 e 20 caracteres e pode
-        incluir <span style="color: red">letras minúsculas</span>, números,
-        pontos e underlines.
-        <span style="color: #0066ff">Exemplo: user._.2803</span> <br /><br />⚫A
-        senha deve ter entre 8 e 30 caracteres e pode incluir letras, números,
-        pontos, asteriscos.
-        <span style="color: #0066ff">Exemplo: Senha1213.*</span>
-        <br /><br />⚫Após preencher os campos, clique no botão ‘Entrar’.
-      </p>
-    </div>
 
-    <br />
+      <div class="container social-links-container">
+        <a
+          href="https://github.com/GL-Gabriel-Lincoln"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
 
-    <script src="./login.js"></script>
-    <script src="../Portifolio/navbar.js"></script>
-    
+        <a
+          href="https://www.linkedin.com/in/-gabriel-lincoln-/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+
+        <a
+          href="https://www.instagram.com/gabriel._.lincoln/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <a
+          href="https://wa.me//5564993248867?text=Ol%C3%A1%20Gabriel%20Lincoln,%20pode%20responder%20agora?"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="WhatsApp"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+
+        <a
+          href="https://www.youtube.com/@GL-Gabriel-Lincoln"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </main>
+
+    <script src="./navbar.js" defer></script>
   </body>
 </html>
